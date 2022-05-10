@@ -38,21 +38,16 @@ app.get("/", (request, response) => {
   response.sendFile(__dirname + "/index.html");
 });
 
-app.get("/api/families/:familyName/:year/:age", (request, response) => {
+app.get("/api/families", (request, response) => {
+  response.send(families);
+});
+app.get("/api/families/:familyName", (request, response) => {
   const family = request.params.familyName.toLowerCase();
   console.log(family);
-  const years = request.params.year;
-  console.log(years);
-  const old = request.params.age;
-  console.log(old);
   if (families[family]) {
     response.json(families[family]);
-  } else if (families[years]) {
-    response.json(families[years]);
-  } else if (families[old]) {
-    response.json(families[old]);
   } else {
-    response.json(families["uknown"]);
+    response.json(families[families]);
   }
 });
 
