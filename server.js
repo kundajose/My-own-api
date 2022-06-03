@@ -10,28 +10,42 @@ app.use(cors());
 
 let families = {
   poul: {
+    familyMembers: 5,
+    fatherName: "Poul",
+    motherName: "Esther",
+    children: "Moses,Ludy and jack",
+    country: "Rwanda",
+    explanation:
+      "These family is a good family full of peace every one wishes to live with it",
     age: 68,
-    birthName: "poul kagaju",
-    lacation: "logos",
-    sunRise: 1978,
   },
   ghandi: {
-    age: 8,
-    birthName: "joseph iradukunda",
-    lacation: "Kigali",
-    sunRise: 1700,
+    familyMembers: 4,
+    fatherName: "Joel",
+    motherName: "Nice",
+    children: "Abraham and Jacob",
+    country: "Burundi",
+    explanation: "These family is a richest in the world",
+    age: 68,
   },
   peter: {
-    age: 80,
-    birthName: "luka linda",
-    lacation: "tokio",
-    sunRise: 1800,
+    familyMembers: 3,
+    fatherName: "Joseph",
+    motherName: "Rose",
+    children: "John",
+    country: "Ghana",
+    explanation: "These family is a good family likes to praise the Lord",
+    age: 68,
   },
   jane: {
-    age: 20,
-    birthName: "zena mirembe",
-    lacation: "kampala",
-    sunRise: 1900,
+    familyMembers: 4,
+    fatherName: "David",
+    motherName: "joy",
+    children: "Ruthand Lucky",
+    country: "Uganda",
+    explanation:
+      "These family is a good family likes to travel all over the world and visiting many parks",
+    age: 28,
   },
 };
 app.get("/", (request, response) => {
